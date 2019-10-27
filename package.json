@@ -15,6 +15,7 @@
   "dependencies": {
     "@types/express": "^4.17.1",
     "express": "^4.17.1",
+    "mongoose": "^5.7.7",
     "travis-cli": "^1.0.9",
     "ts-node-dev": "^1.0.0-pre.43",
     "typescript": "^3.6.4"
