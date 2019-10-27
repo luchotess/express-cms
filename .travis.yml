@@ -1,8 +1,0 @@
-language: node_js
-node_js:
-  - 10.16.0
-
-deploy:
-  provider: heroku
-  api_key: "82e53802-7dfd-45fb-8357-96480d27ff0f"
-  app: cusco360-cms
