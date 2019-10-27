@@ -15,10 +15,10 @@ export async function createUsersController (req, res) {
 export async function updateUsersController (req, res) {
     const userPayload: IUserPayload = req.body;
     const _user: any = await updateUser(req.params.id, userPayload);
-    res.status(201).json(_user.serialize());
+    res.status(200).json(_user.serialize());
 }
 
 export async function deleteUsersController (req, res) {
     const newUser = await deleteUser(req.params.id);
-    res.status(201).json(newUser);
+    res.status(200).json(newUser);
 }
