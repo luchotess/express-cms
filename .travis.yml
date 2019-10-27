@@ -1,5 +1,6 @@
 languaje: node_js
-
+node_js:
+  - 10.16.0
 before_script:
   - npm install
   - npm run build
