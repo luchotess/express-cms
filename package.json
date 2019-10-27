@@ -1,7 +1,7 @@
 {
   "name": "cusco360-cms",
   "version": "1.0.0",
-  "description": "",
+  "description": "CMS",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
