@@ -6,9 +6,11 @@ import userRouter                     from 'users/routes';
 import cmsRouter                      from 'cms/routes';
 import { connectDb }                  from 'database/connection';
 import passport                       from 'passport';
+import cors                           from 'cors';
 
 const server = express();
 server.use(json());
+server.use(cors());
 
 passport.use(localStrategy);
 passport.use(jwtStrategy);

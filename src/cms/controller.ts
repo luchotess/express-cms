@@ -1,4 +1,5 @@
-import { Page } from 'cms/page.model';
+import { Page }       from 'cms/page.model';
+import { uploadFile } from 'cms/upload.service';
 
 export async function getPageController (req, res) {
     const _page = await Page.findOne({domain: req.params.page});
@@ -14,7 +15,7 @@ export async function getPageTypesController (req, res) {
 
 export async function createPageController (req, res) {
     const _page = await Page.create({
-        domain: req.params.page,
+        domain : req.params.page,
         content: req.body
     });
 
@@ -46,5 +47,12 @@ export async function updatePageTypesController (req, res) {
 
     const pageSaved = await _page.save();
 
-    res.json(pageSaved);
+    res.json(pageSaved.types);
+}
+
+
+export async function uploadPageController (req, res) {
+    let response = await uploadFile(req.file.originalname, req.file.path);
+    res.send(response);
+    res.end();
 }
